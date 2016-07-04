@@ -15,6 +15,11 @@
 		515B90051D29E4B100B1B71D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 515B90031D29E4B100B1B71D /* LaunchScreen.storyboard */; };
 		515B90101D29E4B100B1B71D /* D06swift_address02Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515B900F1D29E4B100B1B71D /* D06swift_address02Tests.swift */; };
 		515B901B1D29E4B100B1B71D /* D06swift_address02UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515B901A1D29E4B100B1B71D /* D06swift_address02UITests.swift */; };
+		515B90291D29F7B200B1B71D /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 515B90281D29F7B200B1B71D /* libsqlite3.0.tbd */; };
+		515B90351D29FB9300B1B71D /* data.db in Resources */ = {isa = PBXBuildFile; fileRef = 515B90341D29FB9300B1B71D /* data.db */; };
+		515B903A1D29FBA200B1B71D /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515B90371D29FBA200B1B71D /* SQLiteDB.swift */; };
+		515B903B1D29FBA200B1B71D /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515B90381D29FBA200B1B71D /* SQLTable.swift */; };
+		515B903C1D29FBA200B1B71D /* String-Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515B90391D29FBA200B1B71D /* String-Extras.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,12 @@
 		515B90161D29E4B100B1B71D /* D06swift_address02UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = D06swift_address02UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		515B901A1D29E4B100B1B71D /* D06swift_address02UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D06swift_address02UITests.swift; sourceTree = "<group>"; };
 		515B901C1D29E4B100B1B71D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		515B90281D29F7B200B1B71D /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		515B902A1D29F7C200B1B71D /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		515B90341D29FB9300B1B71D /* data.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.db; sourceTree = "<group>"; };
+		515B90371D29FBA200B1B71D /* SQLiteDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteDB.swift; sourceTree = "<group>"; };
+		515B90381D29FBA200B1B71D /* SQLTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLTable.swift; sourceTree = "<group>"; };
+		515B90391D29FBA200B1B71D /* String-Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String-Extras.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				515B90291D29F7B200B1B71D /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +91,9 @@
 		515B8FEB1D29E4B100B1B71D = {
 			isa = PBXGroup;
 			children = (
+				515B90281D29F7B200B1B71D /* libsqlite3.0.tbd */,
+				515B90341D29FB9300B1B71D /* data.db */,
+				515B90361D29FBA200B1B71D /* SQLiteDB */,
 				515B8FF61D29E4B100B1B71D /* D06swift_address02 */,
 				515B900E1D29E4B100B1B71D /* D06swift_address02Tests */,
 				515B90191D29E4B100B1B71D /* D06swift_address02UITests */,
@@ -106,6 +121,7 @@
 				515B90031D29E4B100B1B71D /* LaunchScreen.storyboard */,
 				515B90061D29E4B100B1B71D /* Info.plist */,
 				515B8FFE1D29E4B100B1B71D /* D06swift_address02.xcdatamodeld */,
+				515B902A1D29F7C200B1B71D /* Header.h */,
 			);
 			path = D06swift_address02;
 			sourceTree = "<group>";
@@ -126,6 +142,16 @@
 				515B901C1D29E4B100B1B71D /* Info.plist */,
 			);
 			path = D06swift_address02UITests;
+			sourceTree = "<group>";
+		};
+		515B90361D29FBA200B1B71D /* SQLiteDB */ = {
+			isa = PBXGroup;
+			children = (
+				515B90371D29FBA200B1B71D /* SQLiteDB.swift */,
+				515B90381D29FBA200B1B71D /* SQLTable.swift */,
+				515B90391D29FBA200B1B71D /* String-Extras.swift */,
+			);
+			path = SQLiteDB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				515B90051D29E4B100B1B71D /* LaunchScreen.storyboard in Resources */,
+				515B90351D29FB9300B1B71D /* data.db in Resources */,
 				515B90021D29E4B100B1B71D /* Assets.xcassets in Resources */,
 				515B8FFD1D29E4B100B1B71D /* Main.storyboard in Resources */,
 			);
@@ -260,8 +287,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				515B90001D29E4B100B1B71D /* D06swift_address02.xcdatamodeld in Sources */,
+				515B903C1D29FBA200B1B71D /* String-Extras.swift in Sources */,
+				515B903A1D29FBA200B1B71D /* SQLiteDB.swift in Sources */,
 				515B8FFA1D29E4B100B1B71D /* ViewController.swift in Sources */,
 				515B8FF81D29E4B100B1B71D /* AppDelegate.swift in Sources */,
+				515B903B1D29FBA200B1B71D /* SQLTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +439,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "spider.D06swift-address02";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/20141105043dj/Desktop/D06swift_address02/D06swift_address02/Header.h;
 			};
 			name = Debug;
 		};
@@ -420,6 +451,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "spider.D06swift-address02";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/20141105043dj/Desktop/D06swift_address02/D06swift_address02/Header.h;
 			};
 			name = Release;
 		};
